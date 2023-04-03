@@ -69,7 +69,10 @@
   "include": [
     "src",
     "vite.config.ts",
-    "package.json"
+    "package.json",
+    "tests",
+    "jest.config.ts",
+    "tsconfig.json"
   ],
   "exclude": [
     "**/sq.ts"
