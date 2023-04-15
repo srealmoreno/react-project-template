@@ -1,16 +1,17 @@
 import { Home } from '@pages/Home'
 import { NotFound } from '@pages/NotFound'
-import { Route, Switch, Router } from 'wouter'
+import { Route, Switch } from 'wouter'
 import { name } from '../package.json'
+import { HashRouter } from '@components/HashRouter'
 
 export function App (): JSX.Element {
   return (
-    <Router base={`/${name}`}>
+    <HashRouter base={`/${name}`}>
       <Switch>
         <Route path='/' component={Home} />
         <Route path='/home' component={Home} />
         <Route component={NotFound} />
       </Switch>
-    </Router>
+    </HashRouter>
   )
 }
